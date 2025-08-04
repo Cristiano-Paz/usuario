@@ -1,6 +1,7 @@
 package com.devjava.usuario.infrastructure.repository;
 
-import com.crispaz.aprendendospring.infrastructure.entity.Telefone;
+
+import com.devjava.usuario.infrastructure.entity.Telefone;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

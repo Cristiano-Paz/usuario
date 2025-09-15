@@ -29,5 +29,7 @@ public class UserDetailsServiceImpl implements UserDetailsService {
                 .withUsername(usuario.getEmail()) // Define o nome de usuário como o e-mail
                 .password(usuario.getSenha()) // Define a senha do usuário
                 .build(); // Constrói o objeto UserDetails
+
+
     }
 }

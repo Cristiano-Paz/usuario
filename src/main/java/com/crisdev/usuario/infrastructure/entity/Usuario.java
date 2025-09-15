@@ -1,12 +1,11 @@
 package com.crisdev.usuario.infrastructure.entity;
 
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
+
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
+
 
 import java.util.Collection;
 import java.util.List;
@@ -17,7 +16,9 @@ import java.util.List;
 @NoArgsConstructor
 @Entity
 @Table(name = "usuario")
+@Builder
 public class Usuario implements UserDetails {
+    public String getEmail;
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
@@ -42,11 +43,11 @@ public class Usuario implements UserDetails {
 
     @Override
     public String getPassword() {
-        return senha;
+        return "";
     }
 
     @Override
     public String getUsername() {
-        return email;
+        return "";
     }
 }
